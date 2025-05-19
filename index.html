@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pradeep's Bookstore</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>📚 Pradeep's Bookstore</h1>
+      <p>Online Bookstore | Hyderabad | Best Prices Guaranteed</p>
+      <nav>
+        <ul>
+          <li><a href="#engineering">Engineering</a></li>
+          <li><a href="#mbbs">MBBS</a></li>
+          <li><a href="#cooking">Cooking</a></li>
+          <li><a href="#others">Others</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="search-bar container">
+    <input type="text" id="searchInput" placeholder="Search for books..." onkeyup="searchBooks()" />
+  </div>
+
+  <section class="intro container">
+    <div class="intro-box">
+      <h2>📚 Discover Books Tailored for Every Reader</h2>
+      <p>Welcome to Pradeep's Online Bookstore – a trusted name in Hyderabad offering books across Engineering, MBBS, Cooking, and more. Find quality books at the best prices and enjoy quick, reliable delivery.</p>
+    </div>
+  </section>
+
+  <!-- Engineering Books -->
+  <section id="engineering" class="category container">
+    <h2>Engineering Books</h2>
+    <div class="book-grid">
+      <div class="book-card">
+        <h3>Data Structures</h3>
+        <p>₹299</p>
+        <button onclick="addToCart('Data Structures', 299)">Buy Now</button>
+      </div>
+      <div class="book-card">
+        <h3>Thermodynamics</h3>
+        <p>₹399</p>
+        <button onclick="addToCart('Thermodynamics', 399)">Buy Now</button>
+      </div>
+      <div class="book-card">
+        <h3>Digital Electronics</h3>
+        <p>₹350</p>
+        <button onclick="addToCart('Digital Electronics', 350)">Buy Now</button>
+      </div>
+      <div class="book-card">
+        <h3>Control Systems</h3>
+        <p>₹320</p>
+        <button onclick="addToCart('Control Systems', 320)">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MBBS Books -->
+  <section id="mbbs" class="category container">
+    <h2>MBBS Books</h2>
+    <div class="book-grid">
+      <div class="book-card">
+        <h3>Human Anatomy</h3>
+        <p>₹499</p>
+        <button onclick="addToCart('Human Anatomy', 499)">Buy Now</button>
+      </div>
+      <div class="book-card">
+        <h3>Biochemistry</h3>
+        <p>₹450</p>
+        <button onclick="addToCart('Biochemistry', 450)">Buy Now</button>
+      </div>
+      <div class="book-card">
+        <h3>Pathology</h3>
+        <p>₹520</p>
+        <button onclick="addToCart('Pathology', 520)">Buy Now</button>
+      </div>
+      <div class="book-card">
+        <h3>Pharmacology</h3>
+        <p>₹480</p>
+        <button onclick="addToCart('Pharmacology', 480)">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cooking Books -->
+  <section id="cooking" class="category container">
+    <h2>Cooking Books</h2>
+    <div class="book-grid">
+      <div class="book-card">
+        <h3>South Indian Recipes</h3>
+        <p>₹199</p>
+        <button onclick="addToCart('South Indian Recipes', 199)">Buy Now</button>
+      </div>
+      <div class="book-card">
+        <h3>Baking Basics</h3>
+        <p>₹250</p>
+        <button onclick="addToCart('Baking Basics', 250)">Buy Now</button>
+      </div>
+      <div class="book-card">
+        <h3>Vegetarian Delights</h3>
+        <p>₹180</p>
+        <button onclick="addToCart('Vegetarian Delights', 180)">Buy Now</button>
+      </div>
+      <div class="book-card">
+        <h3>Everyday Indian Cooking</h3>
+        <p>₹210</p>
+        <button onclick="addToCart('Everyday Indian Cooking', 210)">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Books -->
+  <section id="others" class="category container">
+    <h2>Other Books</h2>
+    <div class="book-grid">
+      <div class="book-card">
+        <h3>Novels</h3>
+        <p>₹150</p>
+        <button onclick="addToCart('Novels', 150)">Buy Now</button>
+      </div>
+      <div class="book-card">
+        <h3>General Knowledge</h3>
+        <p>₹220</p>
+        <button onclick="addToCart('General Knowledge', 220)">Buy Now</button>
+      </div>
+      <div class="book-card">
+        <h3>English Grammar</h3>
+        <p>₹190</p>
+        <button onclick="addToCart('English Grammar', 190)">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart -->
+  <section class="cart container">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: ₹<span id="cart-total">0</span></p>
+    <button onclick="checkout()">Proceed to Payment</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>📞 +91-98765-43210 | 📧 pradeep@bookstore.in</p>
+    <p>&copy; 2025 Pradeep's Bookstore | Hyderabad</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
